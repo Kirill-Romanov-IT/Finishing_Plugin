@@ -39,7 +39,7 @@
 
         <StackPanel Margin="50 20 0 0" Grid.Row="2">
             <TextBlock  Text="Выбор помещения:" />
-            <ListBox Height="200" x:Name="RoomsListBox" Width="256" HorizontalAlignment="Left" >
+            <ListBox Height="200" x:Name="RoomsListBox" Width="256" HorizontalAlignment="Left" BorderThickness="0">
                 
             </ListBox>
         </StackPanel>
