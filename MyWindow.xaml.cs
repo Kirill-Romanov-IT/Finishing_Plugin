@@ -54,16 +54,21 @@ namespace Finishing_Plugin
                     .Cast<Room>()
                     .ToList();
                     RoomsListBox.Items.Clear();
-                    foreach(Room room in roomsOnLevel)
+
+                    List<string> uniqueRoomNames = new List<string>();
+
+                    foreach (Room room in roomsOnLevel)
                     {
+                        
+
                         string infoAdd = room.Name;
                         string infoRemove = room.Number;
-
                         string infoRemoveResult = infoAdd.Replace(infoRemove, "");
-                      
-                        RoomsListBox.Items.Add(infoRemoveResult);
-
-
+                        if (!uniqueRoomNames.Contains(infoRemoveResult) ) {
+                            RoomsListBox.Items.Add(infoRemoveResult);
+                            uniqueRoomNames.Add(infoRemoveResult);
+                        }
+                        
                     }
                 }
             }
